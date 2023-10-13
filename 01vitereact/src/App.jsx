@@ -70,13 +70,19 @@ function App() {
   //custom hook
   const items = useCustomHook();
   console.log(items);
+
+  // let dataKeys = Object.keys(items);
+  let objectValues = Object.values(items); //will convert object values into an Array
+  console.log(objectValues);
+  // console.log(dataKeys);
   return (
     <>
       <h1>Learning React</h1>
       {/* //custom hook */}
-      {items.map((item) => (
-        <pre key={item.id}>{JSON.stringify(item)}</pre>
-      ))}
+      {objectValues.map((item) => {
+        return <pre key={item.id}>{JSON.stringify(item.title)}</pre>;
+      })}
+
       {/* <h2>Counter Vlaue:{counter}</h2> */}
       {/* <button onClick={add Value}>Add Value</button>
       <button onClick={subValue}>remove Value</button> */}
