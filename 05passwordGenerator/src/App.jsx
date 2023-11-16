@@ -19,7 +19,7 @@ function App() {
 
     //to pick random values from string
 
-    for (let i = 1; i <= length; i++) {
+    for (let i = 1; i <= length; i++) { 
       let char = Math.floor(Math.random() * str.length + 1);
       pass += str.charAt(char);
     }
